@@ -15,44 +15,65 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+<span class='anchor' id='about-me'></span> 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am a PhD student under the supervision of [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with [Guoqi Li](https://casialiguoqi.github.io/) and [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Computational Imaging**, **Vision Generation**, and **Brain-inspired deep learning**.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
-
+My recent work primarily focuses on discovering potential inductive biases in visual restoration and generation tasks, while enhancing vision restoration systems through the lenses of pre-training, training, and reasoning based on these biases.
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.01*: &nbsp;🎉🎉 One paper is accepted by International Conference on Learning Representations (**ICLR 2025**).
+- *2024.12*: &nbsp;🎉🎉 One paper is accepted as **oral** by AAAI Conference on Artificial Intelligence (**AAAI 2025**).
+- *2024.04*: &nbsp;🎉🎉 One paper is accepted as **spotlight** by International Conference on Machine Learning (**ICML 2024**).
+- *2023.09*: &nbsp;🎉🎉 One paper is accepted as poster by Conference on Neural Information Processing Systems (**NeurIPS 2023**).
+- *2023.06*: &nbsp;🎉🎉 One paper is accepted as poster by International Conference on Computer Vision (**ICCV 2023**).
+
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><img src='images/DCPT.png' alt="sym" width="100%"></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+**Universal Image Restoration Pre-training via Degradation Classification**  
+JiaKui Hu, Lujia Jin, Zhengjian Yao, Yanye Lu$^*$
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+**<font color = "#224B8D">ICLR 2025</font>** \| [Paper](https://openreview.net/forum?id=PacBhLzeGO) \| [Code](https://github.com/MILab-PKU/dcpt) \| [blog (Chinese)](https://blog.jongkhu.com/article/dcpt)
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+In this paper, we report three interesting findings:
+- Randomly initialized models demonstrate an inherent capability to classify degradation.
+- Models trained on the all-in-one task exhibit the ability to discern unkown degradation.
+- There is a degradation understanding step in the early training of the restoration model.
+
+Based on these findings, *to ensure superior restoration performance, it is imperative
+that the restoration model attains sufficient degradation classification capabilities before training.*
 </div>
 </div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+<!-- ###################################################### -->
+
+<!-- $^\dagger$ -->
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+
+- *2021* **National Scholarship**, China, Xidian University
+- *2020* **National Scholarship**, China, Xidian University
+
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2022.09 - present*, PhD student, Peking University. 
+- *2019.09 - 2023.06*, Undergraduate, Xidian University.
 
-# 💬 Invited Talks
+<!-- # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+# 📫 Academic Services
+
+### Conference Reviewer
+- IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025
+- International Conference on Learning Representations (ICLR) 2025
+
+# 💻 Experience
+- *2024.10 - present*, Internship, at [Baidu Vis](https://vis.baidu.com/#/), China.
+- *2023.09 - present*, PhD student, at [Peking University](https://www.pku.edu.cn/), China.
+- *2021.09 - 2022.01*, Internship, at [OneFlow](https://github.com/Oneflow-Inc/oneflow), China.

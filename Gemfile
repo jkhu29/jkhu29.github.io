@@ -23,5 +23,8 @@ group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
+  gem 'csv'
+  gem 'base64'
   gem 'hawkins'
+  gem 'bigdecimal'
 end
