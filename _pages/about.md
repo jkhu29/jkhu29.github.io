@@ -17,16 +17,17 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span> 
 
-I am a PhD student under the supervision of [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with [Guoqi Li](https://casialiguoqi.github.io/) and [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Computational Imaging**, **Vision Generation**, and **Brain-inspired deep learning**.
+I am a PhD student under the supervision of Dr. [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with Dr. [Guoqi Li](https://casialiguoqi.github.io/) and Dr. [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Vision Generation**, **Computational Imaging**, and **Brain-inspired deep learning**.
 
-My recent work primarily focuses on discovering potential inductive biases in visual restoration and generation tasks, while enhancing vision restoration systems through the lenses of pre-training, training, and reasoning based on these biases.
+My recent work primarily focuses on discovering potential inductive biases in visual generation and restoration tasks, while enhancing vision restoration systems through the lenses of pre-training, training, and reasoning based on these biases.
 
 # 🔥 News
-- *2025.01*: &nbsp;🎉🎉 One paper is accepted by International Conference on Learning Representations (**ICLR 2025**).
-- *2024.12*: &nbsp;🎉🎉 One paper is accepted as **oral** by AAAI Conference on Artificial Intelligence (**AAAI 2025**).
-- *2024.04*: &nbsp;🎉🎉 One paper is accepted as **spotlight** by International Conference on Machine Learning (**ICML 2024**).
-- *2023.09*: &nbsp;🎉🎉 One paper is accepted as poster by Conference on Neural Information Processing Systems (**NeurIPS 2023**).
-- *2023.06*: &nbsp;🎉🎉 One paper is accepted as poster by International Conference on Computer Vision (**ICCV 2023**).
+- *2025.02*: &nbsp;🎉🎉 Two paper are accepted by IEEE / CVF Computer Vision and Pattern Recognition Conference (**CVPR 2025**).
+- *2025.01*: &nbsp;🎉🎉 One first author paper is accepted by International Conference on Learning Representations (**ICLR 2025**).
+- *2024.12*: &nbsp;🎉🎉 One co-first author paper is accepted as **oral** by AAAI Conference on Artificial Intelligence (**AAAI 2025**).
+- *2024.04*: &nbsp;🎉🎉 One first author paper is accepted as **spotlight** by International Conference on Machine Learning (**ICML 2024**).
+- *2023.09*: &nbsp;🎉🎉 One co-first author paper is accepted as poster by Conference on Neural Information Processing Systems (**NeurIPS 2023**).
+- *2023.06*: &nbsp;🎉🎉 One co-first author paper is accepted as poster by International Conference on Computer Vision (**ICCV 2023**).
 
 
 # 📝 Publications 
@@ -55,8 +56,8 @@ that the restoration model attains sufficient degradation classification capabil
 
 # 🎖 Honors and Awards
 
-- *2021* **National Scholarship**, China, Xidian University
-- *2020* **National Scholarship**, China, Xidian University
+- *2021* **National Scholarship**, China, Xidian University.
+- *2020* **National Scholarship**, China, Xidian University.
 
 
 # 📖 Educations
@@ -69,11 +70,21 @@ that the restoration model attains sufficient degradation classification capabil
 
 # 📫 Academic Services
 
-### Conference Reviewer
+### Reviewer
+
+Conference:
+
 - IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025
+- Neural Information Processing Systems (NeurIPS) 2024
 - International Conference on Learning Representations (ICLR) 2025
+- International Conference on Machine Learning (ICML) 2025
+
+Journals:
+
+TNNLS, TCSVT, NN
 
 # 💻 Experience
-- *2024.10 - present*, Internship, at [Baidu Vis](https://vis.baidu.com/#/), China.
+- *2025.04 - present*, Internship, at [AIDC](https://github.com/AIDC-AI), China.
+- *2024.10 - 2025.03*, Internship, at [Baidu Vis](https://vis.baidu.com/#/), China.
 - *2023.09 - present*, PhD student, at [Peking University](https://www.pku.edu.cn/), China.
 - *2021.09 - 2022.01*, Internship, at [OneFlow](https://github.com/Oneflow-Inc/oneflow), China.
