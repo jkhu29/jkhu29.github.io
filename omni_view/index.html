@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Omni-View: Unlocking How Generation Facilitates Understanding in Unified 3D Model based on Multiview images">
+  <meta name="keywords" content="Unified model, Spatial Reasoning, 3D Scene Understanding, Scene Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Omni-View</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <!-- <script src="./static/js/index.js"></script> -->
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://arxiv.org/abs/2312.02010">
+            NaviLLM
+          </a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2412.00493">
+            Video-3D LLM
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Omni-View: Unlocking How Generation Facilitates Understanding in Unified 3D Model based on Multiview images</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jkhu29.github.io/">JiaKui Hu</a>,</span>
+            <span class="author-block">
+              <a href="https://sshan-zhao.github.io/">Shanshan Zhao</a><sup>&sharp;</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=GlqRHLcAAAAJ&hl=en">Qing-Guo Chen</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://bollossom.github.io/">Xuerui Qiu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=OkMMP2AAAAAJ">Jialun Liu</a>,
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=uiDNWw0AAAAJ">Zhao Xu</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=tsKl9GUAAAAJ">Weihua Luo</a>,</span>
+            <span class="author-block">
+              <a href="https://openreview.net/profile?id=~Kaifu_Zhang2">Kaifu Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=WSFToOMAAAAJ">Yanye Lu</a><sup>&sharp;</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Peking University, Alibaba International Digital Commerce Group</span><br>
+            <span class="author-block"><small><sup>&sharp;</sup> Corresponding Author</small></span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/xxxx.xxxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/xxxx.xxxxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link.
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/LaVi-Lab/VG-LLM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper presents Omni-View, which extends the unified multimodal understanding and generation to 3D scenes based on multiview images, exploring the principle that ``generation facilitates understanding". Consisting of understanding model, texture module, and geometry module, Omni-View jointly models scene understanding, novel view synthesis, and geometry estimation, enabling synergistic interaction between 3D scene understanding and generation tasks. By design, it leverages the spatiotemporal modeling capabilities of its texture module responsible for appearance synthesis, alongside the explicit geometric constraints provided by its dedicated geometry module, thereby enriching the model’s holistic understanding of 3D scenes. Trained with a two-stage strategy, Omni-View achieves a state-of-the-art score of 55.4 on the VSI-Bench benchmark, outperforming existing specialized 3D understanding models, while simultaneously delivering strong performance in both novel view synthesis and 3D scene generation.</p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em"> Motivation </h2>
+        <div class="content has-text-justified">
+          <p>
+            Due to the intrinsic geometric and spatiotemporal nature of 3D scenes and their multiview images, generative tasks such as geometry estimation and novel view synthesis are particularly well-suited for facilitating understanding in the 3D domain. This is attributable to the fact that 3D understanding tasks inherently necessitate robust geometric and spatiotemporal modeling capabilities, which can be effectively acquired through these generative tasks. Moreover, biomedical evidence suggests that human understanding of 3D environments is governed by the capacity to generate and imagine future sensory and geometric data in the observed scene. These findings provide us with a guidance: the ``generation facilitates understanding" paradigm presents a promising approach to building a unified model for 3D scene understanding and generation.
+          </p>
+        </div>
+        <img id="painting_icon" width="80%" src="static/images/model.png" alt="VG LLM">
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em"> Omni-View </h2>
+        <div class="content has-text-justified">
+          <p>
+            Building upon Bagel, Omni-View consists of an understanding model and a generation model. The generation model is further composed of two specialized modules: one for texture and one for geometry. Trained via a two-stage process, Omni-View shows high effectiveness in scene understanding and novel view synthesis. Crucially, it unlocks the benefits of its generative capabilities to enhance the model's understanding performance.
+          </p>
+        </div>
+        <img id="painting_icon" width="80%" src="static/images/model.png" alt="VG LLM">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em"> Results on 3D Scene Understanding </h2>
+        <div class="content has-text-justified">
+          <p>
+            (1) Our Omni-View exceeds all current MLLM methods that do not depend on 3D scene input. 
+          </p>
+          <p>
+            (2) This performance improvement is mainly attributed to the architectural design and training scheme that we proposed. 
+          </p>
+          <p>
+            (3) The efficacy of our approach in the QA task is equivalent to advanced MLLM methods that require 3D scene input. 
+          </p>
+        </div>
+        <img id="painting_icon" width="80%" src="static/images/scene_und.png" alt="VG LLM">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em"> Results on Spatial Reasoning </h2>
+        <div class="content has-text-justified">
+          <p>
+            The results on spatial reasoning tasks more fully demonstrate Omni-View's improvement over previous methods in analyzing the relative or absolute position and orientation of spatial objects.
+          </p>
+        </div>
+        <img id="painting_icon" width="80%" src="static/images/spatial_reason.png" alt="VG LLM">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3 has-text-centered" style="margin-top: -1em"> Results</h2>
+
+        <div class="mb-5">
+          <h3 class="title is-4 has-text-centered">3D Scene Understanding</h3>
+          <div class="content has-text-justified">
+          <p>
+Our method effectively handles spatial relationships between objects (e.g., away, opposite, next to), accurately identifying the corresponding frame
+index and generating the 3D-oriented bounding box.
+          </p>
+        </div>
+          <div class="carousel-container">
+            <div class="carousel-track-vg">
+              <img src="static/images/vg/example1.png" alt="3D Scene Understanding Image 1">
+              <img src="static/images/vg/example2.png" alt="3D Scene Understanding Image 2">
+              <img src="static/images/vg/example3.png" alt="3D Visual Grounding Image 3">
+              <img src="static/images/vg/example4.png" alt="3D Visual Grounding Image 4">
+            </div>
+            <button class="carousel-button prev-vg">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+            </button>
+            <button class="carousel-button next-vg">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="title is-4 has-text-centered">Visualization of 3D Video Object Detection</h3>
+          <div class="content has-text-justified">
+          <p>
+          From this figure, we observe that while the baseline performs decently in detecting objects in a given video, incorporating 3D geometry significantly improves both detection precision and recall. 
+          </p>
+        </div>
+          <div class="carousel-container">
+            <div class="carousel-track-vod">
+              <img src="static/images/det/example1.png" alt="3D Video Object Detection Image 1">
+              <img src="static/images/det/example2.png" alt="3D Video Object Detection Image 2">
+              <img src="static/images/det/example3.png" alt="3D Video Object Detection Image 3">
+              <img src="static/images/det/example4.png" alt="3D Video Object Detection Image 4">
+              <img src="static/images/det/example5.png" alt="3D Video Object Detection Image 5">
+              <img src="static/images/det/example6.png" alt="3D Video Object Detection Image 6">
+              <img src="static/images/det/example7.png" alt="3D Video Object Detection Image 7">
+              <img src="static/images/det/example8.png" alt="3D Video Object Detection Image 8">
+            </div>
+            <button class="carousel-button prev-vod">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+            </button>
+            <button class="carousel-button next-vod">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<style>
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track-vg,
+.carousel-track-vod {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-track-vg img,
+.carousel-track-vod img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  color: #333;
+}
+
+.carousel-button:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-button svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.prev-vg, .prev-vod {
+  left: 15px;
+}
+
+.next-vg, .next-vod {
+  right: 15px;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function createInfiniteCarousel(trackSelector, prevSelector, nextSelector) {
+    const track = document.querySelector(trackSelector);
+    const prevButton = document.querySelector(prevSelector);
+    const nextButton = document.querySelector(nextSelector);
+    const originalImages = Array.from(track.children);
+    let currentIndex = 0;
+    let images;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function cloneFirstAndLast() {
+      const firstClone = originalImages[0].cloneNode(true);
+      const lastClone = originalImages[originalImages.length - 1].cloneNode(true);
+      track.appendChild(firstClone);
+      track.insertBefore(lastClone, originalImages[0]);
+      images = Array.from(track.children);
+      // Adjust initial position to the first original image
+      currentIndex = 1;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    cloneFirstAndLast();
+
+    prevButton.addEventListener('click', () => {
+      if (currentIndex <= 0) {
+        track.style.transition = 'none';
+        currentIndex = images.length - 2;
+        updateCarousel();
+        track.offsetHeight; // Trigger reflow
+        track.style.transition = 'transform 0.3s ease-in-out';
+      }
+      currentIndex--;
+      updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+      if (currentIndex >= images.length - 1) {
+        track.style.transition = 'none';
+        currentIndex = 1;
+        updateCarousel();
+        track.offsetHeight; // Trigger reflow
+        track.style.transition = 'transform 0.3s ease-in-out';
+      }
+      currentIndex++;
+      updateCarousel();
+    });
+  }
+
+  createInfiniteCarousel('.carousel-track-vg', '.prev-vg', '.next-vg');
+  createInfiniteCarousel('.carousel-track-vod', '.prev-vod', '.next-vod');
+});
+</script>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{zheng2025learningvideos3dworld,
+      title={Learning from Videos for 3D World: Enhancing MLLMs with 3D Vision Geometry Priors}, 
+      author={Duo Zheng and Shijia Huang and Yanyang Li and Liwei Wang},
+      year={2025},
+      eprint={2505.24625},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2505.24625}, 
+}</code></pre>
+  </div>
+</section> -->
+
+
+ <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This webpage template is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+              under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
