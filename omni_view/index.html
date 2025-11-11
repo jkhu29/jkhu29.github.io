@@ -119,7 +119,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/xxxx.xxxxx"
+                <a href="https://arxiv.org/pdf/2511.07222"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -128,7 +128,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/xxxx.xxxxx"
+                <a href="https://arxiv.org/abs/2511.07222"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -147,24 +147,25 @@
                 </a>
               </span> -->
               <!-- Code Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/LaVi-Lab/VG-LLM"
+              <span class="link-block">
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon)</span>
                   </a>
-              </span> -->
+              </span>
               <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+              <span class="link-block">
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
-                  </a> -->
+                  <span>Dataset (Coming Soon)</span>
+                  </a>
+              </span>
             </div>
 
           </div>
@@ -255,6 +256,42 @@
           </p>
         </div>
         <img id="painting_icon" width="80%" src="static/images/spatial_reason.png" alt="VG LLM">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em"> Ablations </h2>
+        <div class="content has-text-justified">
+          <p>
+            (1) Both texture and geometric estimation can improve the model's scene understanding task.
+          </p>
+          <p>
+            (2) Autoregressive (streaming) geneeration works better.
+          </p>
+        </div>
+        <img id="painting_icon" width="80%" src="static/images/abla_gen.png" alt="VG LLM">
+        <img id="painting_icon" width="80%" src="static/images/abla_ar.png" alt="VG LLM">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em"> 3D Scene Generation </h2>
+        <div class="content has-text-justified">
+          <p>
+            Omni-View achieved the highest PSNR and SSIM, and lowest LPIPS score, indicating that its image quality could surpass that of other methods. However, in terms of pixel-level fidelity, Omni-View shows only slight improvements over popular scene generation models. 
+          </p>
+        </div>
+        <img id="painting_icon" width="80%" src="static/images/scene_gen.png" alt="VG LLM">
       </div>
     </div>
   </div>
@@ -438,20 +475,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{zheng2025learningvideos3dworld,
-      title={Learning from Videos for 3D World: Enhancing MLLMs with 3D Vision Geometry Priors}, 
-      author={Duo Zheng and Shijia Huang and Yanyang Li and Liwei Wang},
+    <pre><code>@misc{hu2025omniview,
+      title={Omni-View: Unlocking How Generation Facilitates Understanding in Unified 3D Model based on Multiview images}, 
+      author={JiaKui Hu and Shanshan Zhao and Qing-Guo Chen and Xuerui Qiu and Jialun Liu and Zhao Xu and Weihua Luo and Kaifu Zhang and Yanye Lu},
       year={2025},
-      eprint={2505.24625},
+      eprint={2511.07222},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2505.24625}, 
+      url={https://arxiv.org/abs/2511.07222}, 
 }</code></pre>
   </div>
-</section> -->
+</section>
 
 
  <footer class="footer">
