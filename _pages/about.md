@@ -17,11 +17,12 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span> 
 
-I am a PhD student under the supervision of Dr. [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with Dr. [Guoqi Li](https://casialiguoqi.github.io/) and Dr. [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Unified Model**, **Computational Imaging**, and **Brain-inspired deep learning**.
+I am a PhD student under the supervision of Dr. [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with Dr. [Guoqi Li](https://casialiguoqi.github.io/) and Dr. [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Unified Model**, **Visual Generation**, and **Brain-inspired deep learning**.
 
-My recent work primarily focuses on discovering potential inductive biases in unified models, while enhancing these systems through the lenses of pre-training, training based on these biases.
+<!-- My recent work primarily focuses on discovering potential inductive biases in unified models, while enhancing these systems through the lenses of pre-training, training based on these biases. -->
 
 # 🔥 News
+- *2025.06*: &nbsp;🎉🎉 Two first author papers are accepted by International Conference on Learning Representations (**ICLR 2026**).
 - *2025.06*: &nbsp;🎉🎉 Two first author papers are accepted by International Conference on Computer Vision (**ICCV 2025**).
 - *2025.02*: &nbsp;🎉🎉 Two paper are accepted by IEEE / CVF Computer Vision and Pattern Recognition Conference (**CVPR 2025**).
 - *2025.01*: &nbsp;🎉🎉 One first author paper is accepted by International Conference on Learning Representations (**ICLR 2025**).
@@ -39,7 +40,7 @@ My recent work primarily focuses on discovering potential inductive biases in un
 **Omni-View: Unlocking How Generation Facilitates Understanding in Unified 3D Model based on Multiview images**  
 **JiaKui Hu**, Shanshan Zhao♯, Qing-Guo Chen, Xuerui Qiu, Jialun Liu, Zhao Xu, Weihua Luo, Kaifu Zhang, Yanye Lu♯
 
-**<font color = "#224B8D">Arxiv 2025</font>** \| [Paper](https://arxiv.org/abs/2511.07222) \| [Code](https://github.com/AIDC-AI/Omni-View) \| [website](https://jkhu29.github.io/omni_view)
+**<font color = "#224B8D">ICLR 2026</font>** \| [Paper](https://arxiv.org/abs/2511.07222) \| [Code](https://github.com/AIDC-AI/Omni-View) \| [website](https://jkhu29.github.io/omni_view)
 
 This paper presents Omni-View, which extends the **unified multimodal understanding and generation to 3D scenes** based on multiview images, exploring the principle that "**generation facilitates understanding**". 
 
@@ -108,7 +109,7 @@ Conference:
 - IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024, 2025, 2026
 - Neural Information Processing Systems (NeurIPS) 2024, 2025
 - International Conference on Learning Representations (ICLR) 2025, 2026
-- International Conference on Machine Learning (ICML) 2025
+- International Conference on Machine Learning (ICML) 2025, 2026
 
 Journals:
 
