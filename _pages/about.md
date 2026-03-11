@@ -17,12 +17,13 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span> 
 
-I am a PhD student under the supervision of Dr. [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with Dr. [Guoqi Li](https://casialiguoqi.github.io/) and Dr. [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Unified Model**, **Visual Generation**, and **Brain-inspired deep learning**.
+I am a PhD student under the supervision of Dr. [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with Dr. [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Unified Model**, **Visual Generation**, and **Brain-inspired deep learning**.
 
 <!-- My recent work primarily focuses on discovering potential inductive biases in unified models, while enhancing these systems through the lenses of pre-training, training based on these biases. -->
 
 # 🔥 News
-- *2025.06*: &nbsp;🎉🎉 Two first author papers are accepted by International Conference on Learning Representations (**ICLR 2026**).
+- *2026.02*: &nbsp;🎉🎉 One first author papers are accepted by IEEE / CVF Computer Vision and Pattern Recognition Conference (**CVPR 2026**).
+- *2026.01*: &nbsp;🎉🎉 Two first author papers are accepted by International Conference on Learning Representations (**ICLR 2026**).
 - *2025.06*: &nbsp;🎉🎉 Two first author papers are accepted by International Conference on Computer Vision (**ICCV 2025**).
 - *2025.02*: &nbsp;🎉🎉 Two paper are accepted by IEEE / CVF Computer Vision and Pattern Recognition Conference (**CVPR 2025**).
 - *2025.01*: &nbsp;🎉🎉 One first author paper is accepted by International Conference on Learning Representations (**ICLR 2025**).
@@ -116,7 +117,8 @@ Journals:
 TNNLS, TCSVT, NN
 
 # 💻 Experience
-- *2025.10 - present*, Supernova Internship, at [TeleAI](https://github.com/Tele-AI), China.
+- *2026.03 - present*, Qingyun Internship, at [Hunyuan3D](https://3d.hunyuan.tencent.com/), Tencent, China.
+- *2025.10 - 2026.03*, Supernova Internship, at [TeleAI](https://github.com/Tele-AI), China.
 - *2025.04 - 2025.10*, Internship, at [AIDC](https://github.com/AIDC-AI), China.
 - *2024.10 - 2025.03*, Internship, at [Baidu Vis](https://vis.baidu.com/#/), China.
 - *2023.09 - present*, PhD student, at [Peking University](https://www.pku.edu.cn/), China.
