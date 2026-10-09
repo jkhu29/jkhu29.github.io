@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span> 
 
-I am a PhD student under the supervision of Dr. [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with Dr. [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Unified Model**, **Visual Generation**, and **Brain-inspired deep learning**.
+I am a PhD student under the supervision of Dr. [Yanye Lu](https://nbic.pku.edu.cn/en/Faculty/Researchers/0a96455fce164e508fbe96162ef92f79.htm) at [Peking University](https://www.pku.edu.cn/). I also closely collaborate with Dr. [Man Yao](https://scholar.google.com/citations?user=eE4vvp0AAAAJ&hl=en) from the Institute of Automation at the Chinese Academy of Sciences. My research interests primarily include **Unified Model**, **World model**, and **Brain-inspired deep learning**.
 
 <!-- My recent work primarily focuses on discovering potential inductive biases in unified models, while enhancing these systems through the lenses of pre-training, training based on these biases. -->
 
@@ -92,14 +92,12 @@ that the restoration model attains sufficient degradation classification capabil
 - *2021* **National Scholarship**, China, Xidian University.
 - *2020* **National Scholarship**, China, Xidian University.
 
-
 # 📖 Educations
 - *2023.09 - present*, PhD student, Peking University. 
 - *2019.09 - 2023.06*, Undergraduate, Xidian University.
 
-<!-- # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
+# 💬 Invited Talks
+- *2026.06*, CVPR 2026 Tutorial, The Road to Convergence: Evolution of Unified Multimodal Models \| [\[video\]](https://cvpr.thecvf.com/virtual/2026/tutorial/36164)
 
 # 📫 Academic Services
 
@@ -117,7 +115,8 @@ Journals:
 TNNLS, TCSVT, NN
 
 # 💻 Experience
-- *2026.03 - present*, Qingyun Internship, at [Hunyuan3D](https://3d.hunyuan.tencent.com/), Tencent, China.
+- *2026.09 - present*, Top Internship, at [XiaomiEV](https://github.com/xiaomi-research), Xiaomi, China.
+- *2026.03 - 2026.09*, Qingyun Internship, at [Hunyuan3D](https://3d.hunyuan.tencent.com/), Tencent, China.
 - *2025.10 - 2026.03*, Supernova Internship, at [TeleAI](https://github.com/Tele-AI), China.
 - *2025.04 - 2025.10*, Internship, at [AIDC](https://github.com/AIDC-AI), China.
 - *2024.10 - 2025.03*, Internship, at [Baidu Vis](https://vis.baidu.com/#/), China.

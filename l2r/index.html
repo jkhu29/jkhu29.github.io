@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Learning to Retrieve: Internalizing Memory Retrieval for Video World Models">
+  <meta name="keywords" content="Memory Retrieval, Video World Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning to Retrieve: Internalizing Memory Retrieval for Video World Models</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .card-image video {
+      width: 150%;
+      height: 150%;
+      object-fit: cover;
+    }
+    .gif-card .card-image {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .gif-card .card-image img {
+      object-fit: cover;
+    }
+    .gif-card .card-content {
+      width: 100%;
+    }
+    .smaller-text {
+      font-size: 0.8rem;
+    }
+    .smallest-text {
+      font-size: 0.5rem;
+    }
+    .section-divider {
+    border-top: 1px solid #dbdbdb;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .wider-video-container {
+    max-width: 1600px !important;  /* Increase this value to make the container wider */
+    width: 90% !important;  /* This ensures some margin on very wide screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wider-column {
+    padding: 0.75rem;
+  }
+    
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More of Our Research Work about World Model
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://jkhu29.github.io/omni_view/">
+              Omni-View (ICLR 2026)
+            </a>
+            <a class="navbar-item" href="https://arxiv.org/abs/2602.21929">
+              Geometry-as-Context (CVPR 2026)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<style>
+  /* —— 只需新增或合并这几行 —— */
+  .title-box {
+    position: relative;
+    display: inline-block;          /* 让标题整体在父元素中可居中 */
+  }
+  .title-box .icon-left {
+    position: absolute;
+    left: -180px;                   /* 调整图标“伸出”标题左侧的距离 */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 150px;                  /* 与原高度一致，可按需改 */
+  }
+</style>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <!-- ======= 图标 + 标题 ======= -->
+          <div class="title-box">
+            <!-- <img src="pics/icon.png" class="icon-left" alt="icon"> -->
+            <h1 class="title is-1 publication-title">
+              Learning to Retrieve:<br>
+              Internalizing Memory Retrieval for Video World Models
+            </h1>
+          </div>
+          <!-- <div style="color: #e74c3c; font-weight: bold; font-size: 1.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem;">
+            SIGGRAPH Asia 2025
+          </div> -->
+
+          <!-- ======= 作者 ======= -->
+          <!-- <div class="is-size-5 publication-authors" style="margin-top:1.2rem">
+            <span class="author-block has-text-centered">
+              <b>Anonymous authors</b>
+            </span>
+          </div> -->
+          <div class="is-size-5 publication-authors" style="margin-top:1.2rem">
+            <span class="author-block has-text-centered">
+              <a href="https://jkhu29.github.io/">JiaKui Hu</a><sup>1,2*</sup>,
+              <a href="https://openreview.net/profile?id=~Tailai_Chen2">Tailai Chen</a><sup>3*</sup>,
+              <a href="https://scholar.google.com/citations?user=C2TyIywAAAAJ">Yuqi Pan</a><sup>3</sup>,
+              <a href="https://bollossom.github.io/sherry.qiu/">Xuerui Qiu</a><sup>3</sup><br>
+              <a href="https://xinntao.github.io/">Jialun Liu</a><sup>4</sup>,
+              <a href="https://scholar.google.com/citations?user=OkMMP2AAAAAJ">Xiao Cao</a><sup>5</sup>,
+              <a href="https://scholar.google.com/citations?user=NkJw6owAAAAJ">Zhenxin Zhu</a><sup>2</sup>,
+              <a href="https://openreview.net/profile?id=~Guang_Chen2">Guang Chen</a><sup>2</sup>,
+              <a href="https://scholar.google.com/citations?user=68tXhe8AAAAJ">Hangjun Ye</a><sup>2</sup>,
+              <a href="https://scholar.google.com/citations?user=uwTzb6IAAAAJ">Bing Wang</a><sup>2#</sup>,
+              <a href="https://scholar.google.com/citations?user=WSFToOMAAAAJ">Yanye Lu</a><sup>1†</sup><br>
+              <sup>1</sup>PKU,&nbsp;
+              <sup>2</sup>Xiaomi,&nbsp;
+              <sup>3</sup>CASIA,&nbsp;
+              <sup>4</sup>UQ,&nbsp;
+              <sup>5</sup>NUS<br>
+              <sup>#</sup>Project leader,&nbsp;
+              <sup>†</sup>Corresponding author
+            </span>
+          </div>
+
+          <!-- ======= 链接按钮 ======= -->
+          <div class="publication-links" style="margin-top:1.2rem">
+            <!-- ArXiv -->
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2610.11444" target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv</span>
+              </a>
+            </span>
+            <!-- GitHub
+            <span class="link-block">
+              <a href="https://github.com/KwaiVGI/Context-as-Memory" target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>GitHub&nbsp;(Coming Soon)</span>
+              </a>
+            </span> -->
+            <!-- Hugging Face -->
+            <!-- <span class="link-block">
+              <a href="https://huggingface.co/datasets/KwaiVGI/Context-as-Memory-Dataset" target="_blank"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><img src="pics/hf.png" alt="Dataset"></span>
+                <span>Dataset&nbsp;(Released)</span>
+              </a>
+            </span> -->
+          </div>
+
+          
+        </div> <!-- column -->
+      </div>   <!-- columns -->
+    </div>     <!-- container -->
+  </div>       <!-- hero-body -->
+</section>
+
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <!-- <h2 class="title is-3" style="margin-top: -1em"> Teaser </h2> -->
+        <div class="content has-text-justified">
+          <p>
+            We introduce Learning-to-Retrieve (L2R), which can generate consistent videos without external memory modules or 3D reconstruction pipelines. Red boxes mark content observed from matched camera poses separated by a long temporal interval, illustrating that L2R preserves scene identity when the camera revisits a previously observed region.
+          </p>
+        </div>
+        <img id="painting_icon" width="80%" src="pics/image.png" alt="L2R">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero is-small" style="margin-top: -50px;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="subtitle has-text-justified">
+            <b>TL;DR:</b> We propose <b>Context-as-Memory</b> for scene-consistent interactive long video generation, using historical context as memory with two simple designs: (1) storing context as memory in frame format and (2) injecting context by concatenating it along the frame dimension at the input. To reduce computational overhead from considering all historical context, we introduce <b>Memory Retrieval</b> to select the most relevant context frames based on FOV overlap detection.
+          </h2>
+          <br>
+          <div class="columns is-centered has-text-justified">
+            <td colspan="3">
+              <div style="text-align: center; width: 100%;">
+                
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; width:100%; max-width:100%;">
+                  <iframe 
+                    src="https://www.youtube.com/embed/6Ye6wWupWD4" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen 
+                    style="position:absolute; top:0; left:0; width:100%; height:100%;">
+                  </iframe>
+                </div>
+
+                
+              </div>
+            </td>
+          </div>
+          <p class="has-text-centered" style="margin-top: 1rem; margin-bottom: 1rem; color: rgb(228, 77, 94); font-weight: 500;">
+            We strongly recommend watching the video to quickly understand our method and see our demo results.
+          </p>
+          <p><br></p>
+</section> -->
+
+
+<!-- Method section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="title is-2">Method</h2>
+          <div class="content has-text-justified my_link">
+            <p>
+              Existing video world models often rely on external memory systems (e.g., query modules, camera FoV overlap, or 3D surfel) to mitigate scene drift during long-horizon generation by explicitly retrieving previously observed content. However, these auxiliary memory mechanisms operate independently of the model's internal generative dynamics, preventing the model from autonomously learning when and what historical information to retrieve.
+            </p>
+          </div>
+          <!-- <div class="columns is-centered has-text-justified">
+            <td colspan="3">
+              <img src="pics/framework.jpg" width="100%" />
+            </td>
+          </div> -->
+          <div class="content has-text-justified my_link">
+            <td colspan="3">
+              <p>
+                Based on this concept, we introduce the <b>Learning-to-Retrieve (L2R)</b> method, which leverages the model's persistent internal state to store historical context. A retrieval gate, controlled by the camera trajectory, selectively accesses relevant historical information from this state to determine "what to retrieve," while a retrieval trigger determines "when to retrieve." We utilize 3D re-visibility signals to supervise the trigger: retrieval is activated when previously observed content re-enters the current field of view, whereas the existing context is maintained otherwise. These components work in concert to enable the model to autonomously learn retrieval behaviors and integrate relevant historical observations into the generation process without requiring a separate retrieval pathway.
+              </p>
+            </td>
+          </div>
+          <!-- <div class="columns is-centered has-text-justified">
+            <td colspan="3">
+              <img src="pics/framework.jpg" width="100%" />
+            </td>
+          </div> -->
+          <p><br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="section-divider"></div> -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-">
+          <h2 class="title is-2">Demos</h2>
+          
+          <!-- First row - 2 videos -->
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <div class="card">
+                <div class="card-image">
+                  <video muted loop="loop" width="100%" preload controls>
+                    <source src="./video/loop/01_左转180度再转回_AncientTempleEnv_2_start574.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="smaller-text">Demo #1: Turn 180 degrees to the left and then turn back.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="card">
+                <div class="card-image">
+                  <video muted loop="loop" width="100%" preload controls>
+                    <source src="./video/loop/02_左转180度再转回_AnimeCitySuburbs_0_start2034.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="smaller-text">Demo #2: Turn 180 degrees to the left and then turn back.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second row - 2 videos -->
+          <div class="columns is-centered" style="margin-top: 2rem;">
+            <div class="column is-half">
+              <div class="card">
+                <div class="card-image">
+                  <video muted loop="loop" width="100%" preload controls>
+                    <source src="./video/OOD/01_左转90度再转回_熊场景00_1774363417.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="smaller-text">Demo #3: (After a teddy bear is inserted into the input image) Turn 90 degrees to the left, then turn back.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="card">
+                <div class="card-image">
+                  <video muted loop="loop" width="100%" preload controls>
+                    <source src="./video/OOD/09_右转45度再转回_熊场景00_1774363417.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="smaller-text">Demo #4: (After a teddy bear is inserted into the input image) Turn 45 degrees to the right, then turn back.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Third row - 1 centered video -->
+          <!-- <div class="columns is-centered" style="margin-top: 2rem;">
+            <div class="column is-6" style="margin: 0 auto;">
+              <div class="card">
+                <div class="card-image">
+                  <video muted loop="loop" width="100%" preload controls>
+                    <source src="./video/demo/demo5.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p class="smaller-text">Demo #5: "A charming coastal village scene featuring brightly painted wooden houses, a lighthouse, and winding stone paths under a partly cloudy sky."</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="section-divider"></div> -->
+
+<!-- <div class="section-divider"></div> -->
+
+<!-- Open Domain Results section -->
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em"> Results on Memory</h2>
+        <!-- <div class="content has-text-justified">
+          <p>
+            The results on spatial reasoning tasks more fully demonstrate Omni-View's improvement over previous methods in analyzing the relative or absolute position and orientation of spatial objects.
+          </p>
+        </div> -->
+        <img id="painting_icon" width="80%" src="pics/table1.png" alt="memory">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" >
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3" style="margin-top: -1em"> Results on Visual Quality</h2>
+        <!-- <div class="content has-text-justified">
+          <p>
+            The results on spatial reasoning tasks more fully demonstrate Omni-View's improvement over previous methods in analyzing the relative or absolute position and orientation of spatial objects.
+          </p>
+        </div> -->
+        <img id="painting_icon" width="80%" src="pics/table2.png" alt="visual">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yu2025cam,
+      title={Learning to Retrieve: Internalizing Memory Retrieval for Video World Models},
+      author={Hu, JiaKui and Chen, Tailai and Pan, Yuqi and Qiu, Xuerui and Liu, Jialun and Cao, Xiao and Zhu, Zhenxin and Chen, Guang and Ye, Hangjun and Wang, Bing and Lu, Yanye},
+      journal={arXiv preprint arXiv:2610.11444},
+      year={2026}
+}
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The template is borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
